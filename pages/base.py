@@ -23,6 +23,15 @@ class BasePage:
 
 
 
+
+
+
+
+
+
+
+
+
 class WebDriver:
 
     class __WebDriver:
