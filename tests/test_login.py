@@ -36,6 +36,8 @@ class TestLogin(unittest.TestCase):
         self.login_page.login("seleniumremote", "test1234")
         self.login_page.check_if_alert_appears()
 
+    def tearDown(self):
+        self.driver.quit()
 
 if __name__ == '__main__':
     unittest.main()

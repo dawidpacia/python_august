@@ -12,8 +12,9 @@ class MainPage(BasePage):
     def go_to_page(self, url):
         self.driver.get(url)
 
-    def search_item(self):
-        self.driver.find_element(*self.search_field_selector).send_keys("test")
+    def search_item(self, product):
+        self.driver.find_element(*self.search_field_selector).clear()
+        self.driver.find_element(*self.search_field_selector).send_keys(product)
         self.driver.find_element(*self.search_button_selector).click()
 
     def navigate_to_login(self):
